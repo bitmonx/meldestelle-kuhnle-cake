@@ -42,5 +42,3 @@
         </nav>
     </div>
 </div>
-
-<p>Test</p>
