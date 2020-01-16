@@ -11,6 +11,9 @@ use Cake\ORM\TableRegistry;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class UsersController extends AppController{
+    /**
+     * @var \App\Controller\Component\UsersComponent|bool|\Cake\Controller\Component\UsersComponent|object|\Users|\UsersComponent
+     */
 
 
     /**
@@ -112,6 +115,21 @@ class UsersController extends AppController{
           $this->Flash->error("Du bist nicht dazu berechtigt User zu löschen.");
         }
 
+    }
+
+    public function editUserData($userId) {
+        $user = $this->Users->get($userId);
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('Die Daten wurden erfolgreich gespeichert.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Die Daten konnten nicht gespeichert werden.'));
+        }
+        $this->set(compact('user'));
     }
 
     public function login(){
