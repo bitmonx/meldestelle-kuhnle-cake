@@ -1,0 +1,150 @@
+.btn.btn-just-icon.btn-simple::after {
+    text-transform: capitalize;
+    content: ' Zur Webseite'
+}
+
+.card-description {
+    display: block !important;
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Style tab links*/
+.tablink {
+  background-color: #68aaa6; /*Standard-HG Farbe*/
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+  margin: 0px !important;
+  box-shadow: 2px -10px 10px #EFEFEF;
+}
+
+#defaultOpen {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#defaultClose {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #68aaa6;
+  display: none;
+  padding: 100px 40px 40px 40px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#team {margin: 100px 0 100px 0;}
+
+/*TURNIER ABSCHNITT*/
+.turnier {
+	text-decoration: none;
+}
+
+
+/*STYLE BUTTONS*/
+.button {/*Ausschreibung,Zeiteinteilung,Ergebnisse*/
+    background-color: #999999 !important;
+    font-size: 14px;
+    margin: 0px 15px;
+    border-radius: 25px !important;
+    flex: 33%;
+    cursor: pointer;
+}
+
+.button a {
+	color: #fff;
+}
+
+a .button{
+	background-color: #68AAA6;
+	cursor: pointer;
+}
+
+/*Hover Buttons*/
+.button:hover {
+	opacity: 0.6;
+}
+
+
+/*Hover Links*/
+a:hover {
+	opacity: 0.6;
+	text-decoration: none;
+}
+
+.datum {
+	color: #3C4858;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+.reitverein{
+	color: #68AAA6;
+	font-size: 21px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*COLUMNS*/
+.row1 {
+  display: flex;
+}
+
+.column1 {
+  flex: 20%;
+  padding: 5px;
+}
+
+.column1 img{
+	width: 75%;
+	box-shadow: 0px 0px 30px #B7B7B7;
+}
+
+.column2 {
+  flex: 80%;
+  padding: 5px 5px 5px 40px;
+}
+
+.row2 {
+	display: flex;
+  text-align: center;
+}
+
+.column3 {
+	flex: 50%;
+}
+
+.column4 {
+	flex: 50%;
+	text-align: right;
+}
+
+.nennschl {
+	color: #999999;
+	font-size: 14px;
+	padding: 10px 0px 10px 0px;
+}
+
+.sportart {
+	color: #3C4858;
+	font-size: 18px;
+	font-weight: bold;
+}

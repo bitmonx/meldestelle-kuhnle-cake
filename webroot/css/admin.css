@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=2.0.10");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C500%2C700&amp;subset=latin&amp;ver=4.9.8");
+
+/*Login-Seite*/
+#content {
+    color: #68aaa6 !important;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    background-color: #fff;
+
+    border-radius: 0px 6px 6px 6px;
+    -webkit-box-shadow:
+        0 16px 24px 2px rgba(0,0,0,0.14),
+        0 6px 30px 5px rgba(0,0,0,0.12),
+        0 8px 10px -5px rgba(0,0,0,0.2);
+    box-shadow:
+        0 16px 24px 2px rgba(0,0,0,0.14),
+        0 6px 30px 5px rgba(0,0,0,0.12),
+        0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.btn.btn-primary {
+    background-color: #68aaa6 !important;
+    border: none;
+    -webkit-box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+    box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+}
+
+a.btn.btn-sm.btn-danger {
+    border: none;
+    -webkit-box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+    box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+}
+
+.btn.btn-outline-primary {
+    border-color: #68AAA6 !important;
+    color: #68AAA6;
+    -webkit-box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+    box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+}
+
+.btn.btn-outline-primary:hover {
+    background-color: #68AAA6;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#tour-file-upload {
+    border-color: #68AAA6;
+    background-color: #fff;
+    color: #68AAA6;
+    -webkit-box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+    box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2);
+}
+
+.login {
+    max-width: 500px;
+}
+
+/*Admin-Bereich*/
+body {
+    background-color: #e5e5e5;
+    padding-bottom: 30px;
+}
+
+.page-title {
+    color: #68AAA6;
+    margin-left: 20px;
+}
+
+.page-subtitle {
+    color: #68AAA6;
+    margin-left: 30px;
+}
+
+nav.navbar {
+    background-color: #68aaa6 !important;
+    color: #fff;
+    margin-top: 15px;
+    border: none !important;
+}
+
+.navbar-brand img {
+    max-width: 235px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin: 5px 0px;
+}
+
+.navbar-nav-left .nav-link:hover {
+    color: lightgrey !important;
+}
+
+#navbarNav > ul.navbar-nav.navbar-nav-right.ml-auto > li > a {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu {
+    background-color: #68aaa6;
+    border: none;
+}
+
+a.dropdown-item {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.dropdown-item:hover {
+    background: none;
+    color: #fff;
+    font-size: large;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 15px;
+}
+
+.card {
+    -webkit-box-shadow:
+        0 16px 24px 2px rgba(0,0,0,0.14),
+        0 6px 30px 5px rgba(0,0,0,0.12),
+        0 8px 10px -5px rgba(0,0,0,0.2);
+    box-shadow:
+        0 16px 24px 2px rgba(0,0,0,0.14),
+        0 6px 30px 5px rgba(0,0,0,0.12),
+        0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+.card-header {
+    background-color: #68AAA6;
+    color: #fff !important;
+}
+.card-title, .card-subtitle {
+    text-decoration: none !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+table.table-view th, tr, td {
+    border: none !important;
+}
+
+button {
+    background-color: #68AAA6 !important;
+    color: #fff !important;
+    float: left !important;
+    -webkit-box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2) !important;
+    box-shadow:
+        0 4px 6px 1px rgba(0,0,0,0.14),
+        0 2px 10px 1px rgba(0,0,0,0.12),
+        0 2px 3px -1px rgba(0,0,0,0.2) !important;
+}
+
+button:hover {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.wrapper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0px 0px 6px 6px;
+    -webkit-box-shadow:
+        10px 10px 10px 0px rgba(0,0,0,0.14);
+    box-shadow:
+        10px 10px 10px 0px rgba(0,0,0,0.14);
+
+}
+
+.form-label {
+    color: #68aaa6
+}
+
+input.datepicker, select, #tour-file-upload {
+    width: 300px !important;
+}
+
+input.submit {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+#host-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #eaeaea;
+    background-position: center;
+    background-size: cover
+}
+
+.host-image {
+    display: block !important;
+    width: 200px !important;
+    height: 200px !important;
+    margin: 10px auto !important;
+    cursor: pointer !important;
+}
+
+.flash-header {
+    margin: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+    nav.navbar {
+        margin: 15px 15px 0px 15px;
+        border-radius: 6px 6px 0px 0px;
+        -webkit-box-shadow:
+            10px 10px 10px 0px rgba(0,0,0,0.14);
+        box-shadow:
+            10px 10px 10px 0px rgba(0,0,0,0.14);
+    }
+
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-top: 50px;
+    }
+
+    .dropdown-menu {
+         border: none;
+         border-radius: 0px;
+         -webkit-box-shadow:
+             10px 17px 10px 0px rgba(0,0,0,0.14);
+         box-shadow:
+             10px 17px 10px 0px rgba(0,0,0,0.14);
+     }
+
+}
