@@ -131,7 +131,7 @@
             </div>
             <div class="zeile textleisten">
                 <div id="Link">
-                    <a class="reitverein" href="<?= $tournament->host->website_url ?>" target="_blank"><?= $tournament->host->name ?></a>
+                    <a class="reitverein" href="<?= $tournament->host->website_url ?>" target="_blank"><?= $tournament->host->name ?></a> <span style="font-size: 2rem; color: red; font-weight: bold"><?= ($tournament->canceled)?'Abgesagt':'' ?></span>
                 </div>
                 <div id="nennschluss">
                     Nennschluss: <?= (isset($tournament->deadline) AND !empty($tournament->deadline))?$tournament->deadline->i18nFormat('dd.MM.yyyy'):'folgt in Kürze' ?>
@@ -141,7 +141,7 @@
                 <div class="turnier-button">
 <!--                    <a class="btn btn-primary button abled" href="/admin/files/download/--><?//= $tournament->file->id ?><!--" target="_blank">Ausschreibung</a>-->
                     <a class="btn btn-primary button
-                        <?php if(isset($tournament->file) AND !empty($tournament->file)){
+                        <?php if(isset($tournament->file) AND !empty($tournament->file) AND !$tournament->canceled){
                         echo ' abled" href="/admin/files/download/'  . $tournament->file->id . '"  target="_blank"';
                     } else {
                         echo ' disabled"';
@@ -151,7 +151,7 @@
                 </div>
                 <div class="turnier-button">
                     <a class="btn btn-primary button
-                        <?php if(isset($tournament->info_url) AND !empty($tournament->info_url)){
+                        <?php if(isset($tournament->info_url) AND !empty($tournament->info_url) AND !$tournament->canceled){
                             echo ' abled" href="'  . $tournament->info_url . '"  target="_blank"';
                         } else {
                             echo ' disabled"';
@@ -161,7 +161,7 @@
                 </div>
                 <div class="turnier-button">
                     <a class="btn btn-primary button
-                        <?php if(isset($tournament->results_url) AND !empty($tournament->results_url)){
+                        <?php if(isset($tournament->results_url) AND !empty($tournament->results_url) AND !$tournament->canceled){
                             echo ' abled" href="'  . $tournament->results_url . '"  target="_blank"';
                         } else {
                             echo ' disabled"';

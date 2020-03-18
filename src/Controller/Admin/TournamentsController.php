@@ -13,7 +13,7 @@ class TournamentsController extends AppController {
     ];
 
     public function index() {
-      $tournamentsTable = $this->getTableLocator()->get('Tournaments');
+        $tournamentsTable = $this->getTableLocator()->get('Tournaments');
       $tournaments = $tournamentsTable->find('all')
         ->contain( 'Hosts');
 
@@ -45,7 +45,7 @@ class TournamentsController extends AppController {
         $disciplines = $disTable->find()
             ->select(['id', 'name'])
             ->all();
-        
+
         $tournament = $this->Tournaments->newEntity();
         if ($this->request->is('post') AND !empty($this->request->getData())) {
             $data = $this->request->getData();
@@ -69,7 +69,7 @@ class TournamentsController extends AppController {
                 $this->Flash->error(__('Der Eintrag konnte nicht gespeichert werden.'));
             }
         }
-        
+
         $this->set(compact('tournament'));
         $this->set(compact('disciplines'));
         $this->set(compact('hosts'));
@@ -115,7 +115,7 @@ class TournamentsController extends AppController {
                 $this->Flash->error(__('Der Eintrag konnte nicht gespeichert werden.'));
             }
         }
-        
+
         $this->set(compact('tournament'));
         $this->set(compact('disciplines'));
         $this->set(compact('hosts'));
@@ -129,6 +129,14 @@ class TournamentsController extends AppController {
         } else {
             $this->Flash->error(__('Der Eintrag konnte nicht gelöscht werden.'));
         }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function cancel($id = null) {
+        $tournament = $this->Tournaments->get($id);
+        $tournament->canceled = true;
+        $this->Tournaments->save($tournament);
 
         return $this->redirect(['action' => 'index']);
     }

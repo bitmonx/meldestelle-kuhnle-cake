@@ -10,6 +10,7 @@
                 <th scope="col"><?= $this->Paginator->sort('end', 'Ende') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('deadline', 'Nennschluss') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('host', 'Veranstalter') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('canceled', 'Abgesagt') ?></th>
                 <th scope="col" class="actions"><?= __('Aktionen') ?></th>
             </tr>
             </thead>
@@ -21,10 +22,12 @@
                     <td><?= (isset($tournament->end) AND !empty($tournament->end))?$tournament->end->i18nFormat('dd.MM.yyyy'):'' ?></td>
                     <td><?= (isset($tournament->deadline) AND !empty($tournament->deadline))?$tournament->deadline->i18nFormat('dd.MM.yyyy'):'' ?></td>
                     <td><?= h($tournament->host->name) ?></td>
+                    <td><?= ($tournament->canceled)?'Ja':'Nein' ?></td>
                     <td class="actions">
                         <a href="/admin/tournaments/view/<?= $tournament->id ?>" class="btn btn-sm btn-primary"><i class="far fa-eye"></i></a>
                         <a href="/admin/tournaments/edit/<?= $tournament->id ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
                         <a href="/admin/tournaments/delete/<?= $tournament->id ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="/admin/tournaments/cancel/<?= $tournament->id ?>" class="btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>
